@@ -3,8 +3,6 @@ kind: ConfigMap
 metadata:
   name: mongodb-scripts
   namespace: database
-  lables:
-    name: app.kubernetes.io/name: mongodb
 data:
   setup.sh: |-
     #!/bin/bash
