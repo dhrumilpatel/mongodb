@@ -188,6 +188,7 @@ spec:
   - metadata:
       name: datadir
     spec:
+      storageClassName: longhorn
       accessModes:
       - ReadWriteOnce
       resources:
