@@ -3,7 +3,7 @@ kind: ClusterRoleBinding
 metadata:
   labels:
     app.kubernetes.io/name: mongodb
-  name: mongodb
+  name: clusterRoleBinding-mongodb
   namespace: database
 roleRef:
   apiGroup: rbac.authorization.k8s.io
