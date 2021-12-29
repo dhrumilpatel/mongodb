@@ -6,7 +6,7 @@ metadata:
 spec:
   serviceName: mongodb-headless
   podManagementPolicy: OrderedReady
-  replicas: 2
+  replicas: 3
   updateStrategy:
     type: RollingUpdate
   selector:
@@ -120,11 +120,11 @@ spec:
           failureThreshold: 6
         resources:
           limits:
-            cpu: 300m
-            memory: 256Mi
+            cpu: 200m
+            memory: 200Mi
           requests:
-            cpu: 100m
-            memory: 128Mi
+            cpu: 80m
+            memory: 100Mi
         volumeMounts:
         - name: datadir
           mountPath: /bitnami/mongodb
@@ -174,10 +174,10 @@ spec:
           successThreshold: 1
         resources:
           limits:
-            cpu: 300m
-            memory: 256Mi
+            cpu: 200m
+            memory: 128Mi
           requests:
-            cpu: 100m
+            cpu: 80m
             memory: 128Mi
       volumes:
       - name: scripts
